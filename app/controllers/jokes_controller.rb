@@ -1,10 +1,9 @@
 class JokesController < ApplicationController
 
   before_action :set_joke, only: [:show, :edit, :update, :destroy]
-
-
+  
   def index
-    
+    @jokes = Joke.all
   end
 
   def show
@@ -12,23 +11,27 @@ class JokesController < ApplicationController
   end
 
   def new
+    @joke = Joke.new
   end
 
   def create
+    @joke = Joke.new(joke_params)
+    if @joke.save
+      redirect_to joke_path(@joke)
+    else
+      render :new
+    end
   end
 
   def edit
-    @joke = Joke.find(params[:id])
+    
   end
-
+  
   def update
-     
-    respond_to do |format|
       if @joke.update(joke_params)
         redirect_to @joke, notice: 'Joke was successfully updated.'
       else
         render :new
-      end
     end
   end
 
@@ -42,7 +45,7 @@ class JokesController < ApplicationController
     @joke = Joke.find(params[:id])
   end
 
-  def params_joke
-    params.require(:joke).permit(:title, :description, :rating)
+  def joke_params
+    params.require(:joke).permit(:title, :description, :rating, :user_id)
   end
 end

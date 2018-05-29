@@ -1,0 +1,9 @@
+
+  <h1>This is what a website looks like without css</h1>
+
+  <h3>Jokes:</h3>
+
+  <% @jokes.each do |joke| %>
+  <p><%= joke.title %> <%= link_to 'ℹ️', joke_path(joke) %></p>
+  <% end %>
+
