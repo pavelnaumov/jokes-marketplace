@@ -1,8 +1,9 @@
 <div class="new-edit-container">
-  <h1>Create new joke</h1>
+  <h1>Edit this joke</h1>
+
   <%= render 'layouts/form' %>
-    <div class="arrow-back">
-    <%= link_to jokes_path do %>
+  <div class="arrow-back">
+    <%= link_to joke_path(@joke) do %>
       <i class="fas fa-arrow-left fa-2x" style="color: black; margin-top: 30px;"></i>
     <% end %>
   </div>

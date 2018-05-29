@@ -1,5 +1,6 @@
+<div class="form-container">
 <%= simple_form_for(@joke) do |f| %>
-<% if @joke.errors.any? %>
+  <% if @joke.errors.any? %>
     <div class="errors-container">
       <ul>
         <% @joke.errors.full_messages.each do |message| %>
@@ -8,7 +9,9 @@
       </ul>
     </div>
   <% end %>
-  <%= f.input :title %>
-  <%= f.input :description %>
-  <%= f.submit 'Create' %>
-  <% end %>
+  <%= f.input :title, placeholder: 'Question', label_html: { class: 'icons' }, label: '.' %>
+  <%= f.input :description, placeholder: 'Answer', label_html: { class: 'icons' }, label: '.', :input_html => {:rows => 1}%>
+  <%= f.input :category, placeholder: 'Category (ex: dad joke)', label_html: { class: 'icons' }, label: '.' %>
+  <%= f.submit 'ADD', class: 'form-button' %>
+<% end %>
+</div>
