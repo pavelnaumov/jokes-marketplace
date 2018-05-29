@@ -14,6 +14,10 @@
 @import "components/index";
 @import "pages/index";
 
+abbr {
+  display: none;
+}
+
 body {  
   color: #565a5c;
   background-color: #F8F8F8;
@@ -40,4 +44,3 @@ body {
   border-radius: 2px;
   height: 4rem;
 }
-

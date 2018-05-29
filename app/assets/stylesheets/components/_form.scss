@@ -1,0 +1,33 @@
+.form-container {
+  width: 315px;
+  margin: 0 auto;
+}
+
+#joke_title, #joke_description, #joke_category {
+  background-color: #F4F4F4;
+  border: none;
+  box-shadow: none;
+}
+
+.joke_title, .joke_description, .joke_category {
+  border-bottom: 1px solid black;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.icons {
+  background-image: url('icons/edit.svg');
+  width: 17px;
+  height: 16px;
+  background-size: cover;
+  padding-right: 10px;
+  font-size: 1px;
+}
+
+.form-button {
+  width: 315px;
+  border-radius: 27.5px;
+  height: 55px;
+  margin-top: 50px;
+}
