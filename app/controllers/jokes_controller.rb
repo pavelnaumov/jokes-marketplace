@@ -13,6 +13,7 @@ class JokesController < ApplicationController
   end
 
   def create
+    
     @joke = Joke.new(params_joke)
     if @joke.save
       redirect_to joke_path(@joke)
