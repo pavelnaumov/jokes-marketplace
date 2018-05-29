@@ -1,20 +1,50 @@
-<div class="navbar-wagon">
-  <!-- Logo -->
-  <%= link_to root_path, class: "navbar-wagon-brand" do %>
-    <%= image_tag "logo-placeholder.jpg", height: 50 %>
-  <% end %>
+<div class="navbar-wagon navbar navbar-default navbar-static-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <!-- Logo -->
+      <%= link_to root_path, class: "navbar-wagon-brand" do %>
+      <%= image_tag "logo-placeholder.jpg", height: 50 %>
+      <% end %>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right">
 
-  <div class="navbar-wagon-right hidden-xs hidden-sm navbar-fixed-top">
-    <%# if user_signed_in? %>
+        <% if(!user_signed_in?) %>
+        <li><%= link_to "Log In", new_user_session_path %></li>
+        <li><%= link_to "Sign Up", new_user_registration_path %></li>
+        <% else %>
+        <div class="navbar-right hidden-xs hidden-sm navbar-fixed-top">
 
-    <p><%= link_to 'Add joke', new_joke_path, class: 'btn btn-primary' %></p>
-  <!-- <div class="search">
-    <%#= render 'form_search' %>
-  </div> -->
-  <%# else %>
-      <!-- Login link (when logged out) -->
-      <%#= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
-    <%# end %>
+ <p><%= link_to 'Add joke', new_joke_path, class: 'btn btn-primary' %></p>
+<!-- <div class="search">
+    <%#= render 'form_search' %> -->
+  <!-- </div> -->
+  </div>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= current_user.email %> <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Your Trips</a></li>
+            <li><a href="#">Wish Lists</a></li>
+            <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Account Setting</a></li>
+            <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+          </ul>
+        </li>
+        <% end %>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
+
+<!--  -->
+
 </div>
 </div>
 
