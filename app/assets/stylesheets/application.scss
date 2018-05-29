@@ -13,3 +13,34 @@
 @import "layouts/index";
 @import "components/index";
 @import "pages/index";
+
+abbr {
+  display: none;
+}
+
+body {  
+  color: #565a5c;
+  background-color: #F8F8F8;
+}
+
+.container {
+  width: 80%;
+}
+
+.btn-primary.btn {
+  border: 1px solid #ff5a5f;
+  border-radius: 2px;
+  font-weight: bold;
+  background-color: #ff5a5f;
+  color: #fff;
+  padding: 10px 25px 10px 25px;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-control {
+  border-radius: 2px;
+  height: 4rem;
+}

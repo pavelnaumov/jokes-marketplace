@@ -1,5 +1,32 @@
+
 <div class="outer-box">
   <div class="row">
     <%= render "components/cards" %>
   </div>
 </div>
+
+<div class="home-banner text-center">
+  <h1>Jokes Market</h1>
+</div>
+
+<div class="container">
+
+<h3>Jokes!</h3>
+
+  <div class="row">
+    <% @jokes.each do |joke| %>
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <div class="card">
+        <p><%= joke.title %><%= link_to 'ℹ️', joke_path(joke) %></p>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
+
+<div class='jokes-index text-center'>
+  <p class='btn btn-success'><%= link_to 'Back to cocktails', :back %></p>
+</div>
+
+
+

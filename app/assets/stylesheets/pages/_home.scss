@@ -1,1 +1,19 @@
-// Specific CSS for your home-page
+
+.container {
+  text-align: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.btn-back {
+  margin: 20px;
+  color: white;
+}
+
+.jokes-index {
+  flex: display;
+  justify-content: space-around;
+  padding: 20px;
+}

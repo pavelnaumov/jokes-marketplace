@@ -1,5 +1,6 @@
 import "bootstrap";
 
+
   // const button = document.querySelector('.corner-button');
 
   // button.addEventListener('click', (event) => {
@@ -21,3 +22,7 @@ cards.forEach((card) => {  // loop through each card
   // other stuff you want to show/hide/move
   });  // close the event listener
 })  // close the loop
+
+import { initUpdateNavbarOnScroll } from '../components/navbar';
+initUpdateNavbarOnScroll();
+
