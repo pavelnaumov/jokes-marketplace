@@ -22,21 +22,28 @@ class JokesController < ApplicationController
   end
 
   def edit
+
   end
 
   def update
-  end
+    if @joke.update(joke_params)
+     redirect_to @joke, notice: 'Joke was successfully updated.'
+   else
+     render :new
+   end
+ end
 
-  def destroy
-  end
+ def destroy
 
-  private
+ end
 
-  def params_joke
-    params.require(:joke).permit(:title, :description, :rating, :user_id)
-  end
+ private
 
-  def set_joke
-    @joke = Joke.find(params[:id])
+ def params_joke
+  params.require(:joke).permit(:title, :description, :rating, :user_id)
+end
+
+def set_joke
+  @joke = Joke.find(params[:id])
   end
 end
