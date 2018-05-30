@@ -12,6 +12,6 @@
   <%= f.input :title, placeholder: 'Question', label_html: { class: 'icons pen-icon' }, label: '.' %>
   <%= f.input :description, placeholder: 'Answer', label_html: { class: 'icons pen-icon' }, label: '.', :input_html => {:rows => 1}%>
   <%= f.input :category, placeholder: 'Category (ex: dad joke)', label_html: { class: 'icons' }, label: '.' %>
-  <%= f.button :submit, 'ADD', class: 'form-button' %>
+  <%= f.submit 'ADD', class: 'form-button' %>
 <% end %>
 </div>
