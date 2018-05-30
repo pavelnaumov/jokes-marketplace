@@ -25,4 +25,3 @@ cards.forEach((card) => {  // loop through each card
 
 import { initUpdateNavbarOnScroll } from '../components/navbar';
 initUpdateNavbarOnScroll();
-
