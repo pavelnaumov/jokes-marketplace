@@ -3,7 +3,7 @@
   <a href="/" class="navbar-wagon-brand">
     <img src="laugh.png" alt="logo">
   </a>
-  
+
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
     <p><%= link_to 'Add joke', new_joke_path, class: 'btn btn-primary' %></p>
@@ -12,7 +12,7 @@
       <div class="dropdown">
         <img src="https://kitt.lewagon.com/placeholder/users/pavelnaumov" class="avatar dropdown-toggle" id="navbar-wagon-menu" data-toggle="dropdown">
         <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-          <li><a href="#">Your Jokes</a></li>
+          <li><%= link_to 'Your Jokes', admin_jokes_path %></a></li>
           <li><a href="#">Bought Jokes</a></li>
           <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
           <li role="separator" class="divider"></li>
