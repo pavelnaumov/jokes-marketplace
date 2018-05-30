@@ -3,5 +3,4 @@ class Joke < ApplicationRecord
   validates :title, presence: true
   validates :description, presence: true
   validates :user, presence: false
-  #validates :rating, default: 0
 end

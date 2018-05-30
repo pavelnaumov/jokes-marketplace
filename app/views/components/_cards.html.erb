@@ -1,21 +1,25 @@
+<div class="cards-container">
+  <div class="row">
 <% @jokes.each do |joke| %>
-<div class="col-sm-12 col-sm-6 col-md-4">
-  <div class="joke-card">
-    <div class="card-main text-center">
-      <div class="joke-title">
-        <%= joke.title %>
+    <div class="col-xs-12 col-sm-6 col-md-4">
+      <div class="joke-card">
+        <div class="card-main text-center">
+          <div class="joke-title">
+            <%= joke.title %>
+          </div>
+          <div class="joke-rating">
+            <%= "⭐️" * joke.rating.to_i %>
+          </div>
+        </div>
+        <div class="joke-category-author text-center">
+          <%= joke.category %> by <br> <%= joke.user.email.split('@').first %>
+        </div>
+        <div class="corner-button"></div>
+        <div class="joke-answer">
+          <%= joke.description %>
+        </div>
       </div>
-      <div class="joke-rating">
-        <%= "⭐️" * joke.rating.to_i %>
-      </div>
     </div>
-    <div class="joke-category-author text-center">
-      <%= joke.category %> by <br> <%= joke.user.email.split('@').first %>
-    </div>
-    <div class="corner-button"></div>
-    <div class="joke-answer">
-      <%= joke.description %>
-    </div>
+<% end %>
   </div>
 </div>
-<% end %>

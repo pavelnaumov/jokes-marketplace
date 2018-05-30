@@ -12,7 +12,6 @@ import "bootstrap";
 import { initUpdateNavbarOnScroll } from '../components/navbar';
 initUpdateNavbarOnScroll();
 
-
 import { extendCornerButton } from '../components/card';
 extendCornerButton();
 
