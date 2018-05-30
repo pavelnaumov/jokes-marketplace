@@ -3,21 +3,33 @@
   margin: 0 auto;
 }
 
-#joke_title, #joke_description, #joke_category {
+#joke_title, #joke_description, #joke_category, #user_username, #user_email, #user_password, #user_password_confirmation {
   background-color: #F4F4F4;
   border: none;
   box-shadow: none;
 }
 
-.joke_title, .joke_description, .joke_category {
+.joke_title, .joke_description, .joke_category, .input-box, .user_email, .user_password, .user_password_confirmation, .user_username{
   border-bottom: 1px solid black;
   display: flex;
   align-items: center;
   margin-bottom: 30px;
 }
 
+  .pen-icon {
+    background-image: url('icons/edit.svg');
+  }
+  .user-icon {
+    background-image: url('icons/user.svg');
+  }
+  .lock-icon {
+    background-image: url('icons/padlock.svg');
+  }
+  .envelope-icon {
+    background-image: url('icons/envelope.svg');
+  }
+
 .icons {
-  background-image: url('icons/edit.svg');
   width: 17px;
   height: 16px;
   background-size: cover;
@@ -29,5 +41,5 @@
   width: 315px;
   border-radius: 27.5px;
   height: 55px;
-  margin-top: 50px;
+  margin: 50px 0;
 }
