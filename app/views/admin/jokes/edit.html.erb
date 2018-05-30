@@ -1,3 +1,19 @@
-<h1>edit your joke</h1>
+<h1>Edit your joke</h1>
 
-<%= render 'layouts/form' %>
+<div class="form-container">
+<%= simple_form_for [:admin, @joke] do |f| %>
+  <% if @joke.errors.any? %>
+    <div class="errors-container">
+      <ul>
+        <% @joke.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <%= f.input :title, placeholder: 'Question', label_html: { class: 'icons pen-icon' }, label: '.' %>
+  <%= f.input :description, placeholder: 'Answer', label_html: { class: 'icons pen-icon' }, label: '.', :input_html => {:rows => 1}%>
+  <%= f.input :category, placeholder: 'Category (ex: dad joke)', label_html: { class: 'icons' }, label: '.' %>
+  <%= f.submit 'EDIT', class: 'form-button' %>
+<% end %>
+</div>
