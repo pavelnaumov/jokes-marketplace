@@ -9,6 +9,6 @@ function initUpdateNavbarOnScroll() {
       }
     });
   }
-}
+};
 
 export { initUpdateNavbarOnScroll };

@@ -21,7 +21,9 @@
       edit
     </div>
     <div class="delete">
-      <%= image_tag 'plus.svg' %>
+      <%= link_to admin_joke_path(joke), method: :delete do %>
+        <%= image_tag 'plus.svg' %>
+      <% end %>
     </div>
     <div class="delete-text">
       delete
