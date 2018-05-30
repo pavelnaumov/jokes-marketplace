@@ -1,11 +1,15 @@
 
 
 function clickOnBottonArrow() {
-  const icons = document.querySelectorAll('.icons');
-  const menuArrow = document.querySelector('.arrow');
-  const edit = document.querySelector('.edit');
-  const destroy = document.querySelector('.delete');
+  const cards = document.querySelectorAll('.joke-card');  // gets all the cards (an array), I don't know what class are you using
 
+  cards.forEach((card) => {
+  const menuArrow = card.querySelector('.arrow');
+  const edit = card.querySelector('.edit');
+  const destroy = card.querySelector('.delete');
+  console.log(menuArrow);
+  console.log(edit);
+  console.log(destroy);
   menuArrow.addEventListener('click', (event) => {
     event.currentTarget.classList.toggle('arrow-flipped');
     edit.classList.toggle('edit-appears');
@@ -15,13 +19,17 @@ function clickOnBottonArrow() {
     //   icon.classList.toggle('icons');
     // })
   });
-};
+});
+}
 
 function mouseoverEditAndDelete() {
-  const edit = document.querySelector('.edit');
-  const destroy = document.querySelector('.delete');
-  const editText = document.querySelector('.edit-text');
-  const deleteText = document.querySelector('.delete-text');
+  const cards = document.querySelectorAll('.joke-card');  // gets all the cards (an array), I don't know what class are you using
+
+  cards.forEach((card) => {
+  const edit = card.querySelector('.edit');
+  const destroy = card.querySelector('.delete');
+  const editText = card.querySelector('.edit-text');
+  const deleteText = card.querySelector('.delete-text');
 
   edit.addEventListener('mouseout', (event) => {
     editText.classList.toggle('edit-mouseover');
@@ -30,7 +38,8 @@ function mouseoverEditAndDelete() {
   destroy.addEventListener('mouseout', (event) => {
     deleteText.classList.toggle('delete-mouseover');
   });
-};
+});
+}
 
 export { clickOnBottonArrow };
 export { mouseoverEditAndDelete };
