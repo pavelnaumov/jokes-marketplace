@@ -1,6 +1,22 @@
 <div class="new-edit-container">
   <h1>Create new joke</h1>
-  <%= render 'layouts/form' %>
+  <div class="form-container">
+    <%= simple_form_for(@joke) do |f| %>
+      <% if @joke.errors.any? %>
+        <div class="errors-container">
+          <ul>
+            <% @joke.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+      <%= f.input :title, placeholder: 'Question', label_html: { class: 'icons pen-icon' }, label: '.' %>
+      <%= f.input :description, placeholder: 'Answer', label_html: { class: 'icons pen-icon' }, label: '.', :input_html => {:rows => 1}%>
+      <%= f.input :category, placeholder: 'Category (ex: dad joke)', label_html: { class: 'icons' }, label: '.' %>
+      <%= f.submit 'ADD', class: 'form-button' %>
+    <% end %>
+    </div>
     <div class="arrow-back">
     <%= link_to root_path do %>
       <i class="fas fa-arrow-left fa-2x" style="color: black; margin-top: 30px;"></i>
