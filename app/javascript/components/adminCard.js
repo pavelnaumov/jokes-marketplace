@@ -5,18 +5,18 @@ function clickOnBottonArrow() {
   const menuArrow = card.querySelector('.arrow');
   const edit = card.querySelector('.edit');
   const destroy = card.querySelector('.delete');
-  console.log(menuArrow);
-  console.log(edit);
-  console.log(destroy);
-  menuArrow.addEventListener('click', (event) => {
-    event.currentTarget.classList.toggle('arrow-flipped');
-    edit.classList.toggle('edit-appears');
-    destroy.classList.toggle('delete-appears');
-    // icons.forEach(icon => {
-    //   icon.classList.toggle('icon-appears');
-    //   icon.classList.toggle('icons');
-    // })
-  });
+
+  if (menuArrow) {
+    menuArrow.addEventListener('click', (event) => {
+      event.currentTarget.classList.toggle('arrow-flipped');
+      edit.classList.toggle('edit-appears');
+      destroy.classList.toggle('delete-appears');
+      // icons.forEach(icon => {
+      //   icon.classList.toggle('icon-appears');
+      //   icon.classList.toggle('icons');
+      // })
+    });
+  }
 });
 }
 
