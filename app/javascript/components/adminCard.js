@@ -29,13 +29,15 @@ function mouseoverEditAndDelete() {
   const editText = card.querySelector('.edit-text');
   const deleteText = card.querySelector('.delete-text');
 
-  edit.addEventListener('mouseout', (event) => {
-    editText.classList.toggle('edit-mouseover');
-  });
+  if (edit && destroy) {
+    edit.addEventListener('mouseout', (event) => {
+      editText.classList.toggle('edit-mouseover');
+    });
 
-  destroy.addEventListener('mouseout', (event) => {
-    deleteText.classList.toggle('delete-mouseover');
-  });
+    destroy.addEventListener('mouseout', (event) => {
+      deleteText.classList.toggle('delete-mouseover');
+    });
+  }
 });
 }
 
