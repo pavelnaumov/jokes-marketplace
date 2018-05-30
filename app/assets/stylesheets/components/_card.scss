@@ -1,7 +1,6 @@
 .cards-container {
-  margin-top: 50px;
+  margin: 30px 50px;
 }
-
 .joke-card {
   position: relative;
   border-radius: 10px;
@@ -9,6 +8,7 @@
   width: 320px;
   background-color: white;
   box-shadow: 1px 1px 3px RGBA(90, 90, 90, 0.4);
+  margin: 20px auto;
 }
 
 .corner-button {
