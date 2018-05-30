@@ -16,7 +16,7 @@ class JokesController < ApplicationController
     @joke = Joke.new(params_joke)
     @joke.user = current_user
     if @joke.save
-      redirect_to joke_path(@joke)
+      redirect_to root_path
     else
       render :new
     end
