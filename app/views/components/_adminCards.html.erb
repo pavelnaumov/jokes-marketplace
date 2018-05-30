@@ -13,7 +13,9 @@
       <%= image_tag 'right-arrow.svg' %>
     </div>
     <div class="edit">
+      <%= link_to edit_admin_joke_path(joke) do %>
       <%= image_tag 'edit.svg' %>
+      <% end %>
     </div>
     <div class="edit-text">
       edit

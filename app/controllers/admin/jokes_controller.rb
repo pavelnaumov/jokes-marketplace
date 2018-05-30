@@ -12,8 +12,8 @@ class Admin::JokesController < ApplicationController
     #@joke = current_user.joke
     @joke = Joke.find(params[:id])
 
-    if @joke.update(joke_params)
-     redirect_to @joke, notice: 'Joke was successfully updated.'
+    if @joke.update(params_joke)
+     redirect_to admin_jokes_path, notice: 'Joke was successfully updated.'
    else
      render :new
    end
@@ -27,4 +27,10 @@ class Admin::JokesController < ApplicationController
 
   redirect_to admin_jokes_path
  end
+
+ private
+
+ def params_joke
+  params.require(:joke).permit(:title, :description, :rating, :user_id)
+  end
 end

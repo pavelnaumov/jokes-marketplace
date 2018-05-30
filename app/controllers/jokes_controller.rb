@@ -27,11 +27,11 @@ class JokesController < ApplicationController
   end
 
   def update
-    if @joke.update(joke_params)
-     redirect_to @joke, notice: 'Joke was successfully updated.'
-   else
-     render :new
-   end
+   #  if @joke.update(params_joke)
+   #   redirect_to @joke, notice: 'Joke was successfully updated.'
+   # else
+   #   render :new
+   # end
  end
 
  def destroy
