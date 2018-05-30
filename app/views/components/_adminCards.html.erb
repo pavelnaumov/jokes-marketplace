@@ -1,0 +1,33 @@
+<% @jokes.each do |joke| %>
+<div class="col-sm-12 col-sm-6 col-md-4">
+  <div class="joke-card">
+    <div class="card-main text-center">
+      <div class="joke-title">
+        <%= joke.title %>
+      </div>
+      <div class="joke-rating">
+        <%= "⭐️" * joke.rating.to_i %>
+      </div>
+    </div>
+    <div class="arrow">
+      <%= image_tag 'right-arrow.svg' %>
+    </div>
+    <div class="edit">
+      <%= image_tag 'edit.svg' %>
+    </div>
+    <div class="edit-text">
+      edit
+    </div>
+    <div class="delete">
+      <%= image_tag 'plus.svg' %>
+    </div>
+    <div class="delete-text">
+      delete
+    </div>
+    <div class="corner-button"></div>
+    <div class="joke-answer">
+      <%= joke.description %>
+    </div>
+  </div>
+</div>
+<% end %>
