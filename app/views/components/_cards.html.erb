@@ -6,7 +6,7 @@
         <%= joke.title %>
       </div>
       <div class="joke-rating">
-        <%= '⭐️' * joke.rating %>
+        <%= "⭐️" * joke.rating.to_i %>
       </div>
     </div>
     <div class="joke-category-author text-center">
