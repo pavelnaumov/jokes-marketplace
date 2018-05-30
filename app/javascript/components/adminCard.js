@@ -1,5 +1,3 @@
-
-
 function clickOnBottonArrow() {
   const cards = document.querySelectorAll('.joke-card');  // gets all the cards (an array), I don't know what class are you using
 
