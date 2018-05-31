@@ -6,8 +6,7 @@ Rails.application.routes.draw do
   root to: "jokes#index"
   namespace :admin do
     resources :jokes, only: [:index, :destroy, :show, :edit, :update] do
-      resources :bought_jokes, only: [:index, :show, :destroy]
-      post 'create', to: 'bought_jokes#create', as: :create_bought_joke
+      resources :bought_jokes, only: [:index, :show, :destroy, :create]
     end
   end
 

@@ -1,6 +1,8 @@
 <div class="cards-container">
   <div class="row">
-<% @jokes.each do |joke| %>
+
+
+    <% @jokes.each do |joke| %>
     <div class="col-xs-12 col-sm-6 col-md-4">
       <div class="joke-card">
         <div class="card-main text-center">
@@ -17,10 +19,10 @@
         <div class="corner-button"></div>
         <div class="joke-answer">
           <p class="blurry-text"><%= joke.description %></p>
-          <a href="#" class="btn buy-button">BUY</a>
+          <%= link_to 'BUY', admin_joke_bought_jokes_path(joke), :class => "btn buy-button", method: :post %>
         </div>
       </div>
     </div>
-<% end %>
+    <% end %>
   </div>
 </div>
