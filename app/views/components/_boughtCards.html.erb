@@ -14,18 +14,14 @@
         <div class="arrow">
           <%= image_tag 'right-arrow.svg' %>
         </div>
-        <div class="edit">
-          <%= link_to edit_admin_joke_path(joke) do %>
+        <div class="edit hidden">
           <%= image_tag 'edit.svg' %>
-          <% end %>
         </div>
-        <div class="edit-text">
+        <div class="edit-text hidden">
           edit
         </div>
         <div class="delete">
-          <%= link_to admin_joke_path(joke), method: :delete do %>
           <%= image_tag 'plus.svg' %>
-          <% end %>
         </div>
         <div class="delete-text">
           delete

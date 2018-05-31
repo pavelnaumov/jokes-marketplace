@@ -16,8 +16,8 @@ import { extendCornerButton } from '../components/card';
 extendCornerButton();
 
 
-import { clickOnBottonArrow } from '../components/adminCard';
-clickOnBottonArrow();
+import { clickOnButtonArrowToEditAndDelete } from '../components/adminCard';
+clickOnButtonArrowToEditAndDelete();
 
 
 import { mouseoverEditAndDelete } from '../components/adminCard';
