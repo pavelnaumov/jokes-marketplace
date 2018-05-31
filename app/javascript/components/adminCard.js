@@ -5,18 +5,18 @@ function clickOnBottonArrow() {
   const menuArrow = card.querySelector('.arrow');
   const edit = card.querySelector('.edit');
   const destroy = card.querySelector('.delete');
-  console.log(menuArrow);
-  console.log(edit);
-  console.log(destroy);
-  menuArrow.addEventListener('click', (event) => {
-    event.currentTarget.classList.toggle('arrow-flipped');
-    edit.classList.toggle('edit-appears');
-    destroy.classList.toggle('delete-appears');
-    // icons.forEach(icon => {
-    //   icon.classList.toggle('icon-appears');
-    //   icon.classList.toggle('icons');
-    // })
-  });
+
+  if (menuArrow) {
+    menuArrow.addEventListener('click', (event) => {
+      event.currentTarget.classList.toggle('arrow-flipped');
+      edit.classList.toggle('edit-appears');
+      destroy.classList.toggle('delete-appears');
+      // icons.forEach(icon => {
+      //   icon.classList.toggle('icon-appears');
+      //   icon.classList.toggle('icons');
+      // })
+    });
+  }
 });
 }
 
@@ -29,13 +29,15 @@ function mouseoverEditAndDelete() {
   const editText = card.querySelector('.edit-text');
   const deleteText = card.querySelector('.delete-text');
 
-  edit.addEventListener('mouseout', (event) => {
-    editText.classList.toggle('edit-mouseover');
-  });
+  if (edit && destroy) {
+    edit.addEventListener('mouseout', (event) => {
+      editText.classList.toggle('edit-mouseover');
+    });
 
-  destroy.addEventListener('mouseout', (event) => {
-    deleteText.classList.toggle('delete-mouseover');
-  });
+    destroy.addEventListener('mouseout', (event) => {
+      deleteText.classList.toggle('delete-mouseover');
+    });
+  }
 });
 }
 

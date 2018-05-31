@@ -1,4 +1,5 @@
 class JokesController < ApplicationController
+
   before_action :set_joke, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -9,9 +10,6 @@ class JokesController < ApplicationController
     end
   end
 
-  def show
-    @joke = Joke.find(params[:id])
-  end
 
   def new
     @joke = Joke.new
@@ -27,25 +25,12 @@ class JokesController < ApplicationController
     end
   end
 
-  def edit
-
-  end
-
-  def update
-
-  end
-
-  def destroy
-
-  end
-
   private
 
   def params_joke
     params.require(:joke).permit(:title, :description, :rating, :user_id)
   end
-
+  
   def set_joke
     @joke = Joke.find(params[:id])
-    end
   end
