@@ -1,6 +1,11 @@
 class Admin::JokesController < ApplicationController
+
   def index
     @jokes = current_user.jokes
+  end
+
+  def show
+    @joke = Joke.find(params[:id])
   end
 
   def edit
