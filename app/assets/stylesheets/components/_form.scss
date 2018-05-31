@@ -16,18 +16,18 @@
   margin-bottom: 30px;
 }
 
-  .pen-icon {
-    background-image: url('icons/edit.svg');
-  }
-  .user-icon {
-    background-image: url('icons/user.svg');
-  }
-  .lock-icon {
-    background-image: url('icons/padlock.svg');
-  }
-  .envelope-icon {
-    background-image: url('icons/envelope.svg');
-  }
+.pen-icon {
+  background-image: image-url('icons/edit.svg');
+}
+.user-icon {
+  background-image: image-url('icons/user.svg');
+}
+.lock-icon {
+  background-image: image-url('icons/padlock.svg');
+}
+.envelope-icon {
+  background-image: image-url('icons/envelope.svg');
+}
 
 .icons {
   width: 17px;
