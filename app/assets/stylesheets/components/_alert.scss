@@ -7,8 +7,13 @@
   color: white;
 }
 .alert-info {
-  background: $green;
+  background: #466CA4;
 }
 .alert-warning {
-  background: $red;
+  background: #B43C36;
+}
+
+.alert-info, .alert-warning {
+  opacity: 0.8;
+  border: none;
 }

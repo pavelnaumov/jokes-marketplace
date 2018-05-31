@@ -26,14 +26,24 @@
   justify-content: space-betweem;
 }
 
+a:hover {
+  text-decoration: none;
+  color: black;
+}
+
 .navbar-button {
-  border: 1px solid gray;
+  border: 1px solid #dcdada;
   color: black;
   background-color: white;
-  padding: 12px 15px;
+  padding: 15px 25px;
   border-radius: 27.5px;
   margin-right: 20px;
-
+  font-size: 15px;
+  transition: 0.5s;
+  &:hover {
+    font-weight: bold;
+    transition: 0.5s;
+  }
 }
 /* Basic navbar item */
 .navbar-wagon-item {
