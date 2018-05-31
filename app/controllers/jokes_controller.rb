@@ -30,7 +30,8 @@ class JokesController < ApplicationController
   def params_joke
     params.require(:joke).permit(:title, :description, :rating, :user_id)
   end
-  
+
   def set_joke
     @joke = Joke.find(params[:id])
   end
+end
