@@ -3,7 +3,7 @@ class Admin::BoughtJokesController < ApplicationController
   before_action :set_joke, only: [:create]
 
   def index
-
+    @bought_jokes = BoughtJoke.all
   end
 
   def show
@@ -15,10 +15,18 @@ class Admin::BoughtJokesController < ApplicationController
     redirect_to admin_joke_bought_jokes_path
   end
 
-  def create
-    
+  def new
+    @bought_joke = BoughtJoke.new
   end
 
+  def create
+    @bought_joke = BoughtJoke.new
+    @bought_joke.user = current_user
+    @bought_joke.joke = Joke.find(params[:joke_id])
+    @bought_joke.save
+
+    redirect_to admin_joke_bought_jokes_path(:id)
+  end
 
   private
 
