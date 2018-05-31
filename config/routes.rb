@@ -4,14 +4,11 @@ Rails.application.routes.draw do
   devise_for :users
 
   root to: "jokes#index"
-
-  resources :jokes, except: :index do 
-    resources :bought_jokes, only: [:index, :show, :destroy]
-
   namespace :admin do
-    resources :jokes, only: [:index, :edit, :update, :destroy]
+    resources :jokes, only: [:index, :destroy, :show, :edit, :update]  do 
+      resources :bought_jokes, only: [:index, :show, :destroy, :create]
+    end
   end
-end
-
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-end
+  
+    resources :jokes, only: [:index, :new, :create]
+  end
