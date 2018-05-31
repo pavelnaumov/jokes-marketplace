@@ -1,16 +1,18 @@
 class Admin::BoughtJokesController < ApplicationController
   before_action :set_bought_joke, only: [:show, :destroy]
+  before_action :set_joke, only: [:create]
 
   def index
 
   end
 
   def show
-    
+
   end
 
   def destroy
-
+    @bought_joke.destroy
+    redirect_to admin_joke_bought_jokes_path
   end
 
   def create
