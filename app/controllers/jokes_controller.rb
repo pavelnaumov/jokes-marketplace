@@ -3,11 +3,14 @@ class JokesController < ApplicationController
   before_action :set_joke, only: [:show, :edit, :update, :destroy]
 
   def index
+
     if params[:query].present?
-      @jokes = Joke.where("category ILIKE ?", "%#{params[:query]}%")
+      @jokes = Joke.where("category ILIKE ?", "%#{params[:query]}%").where.not(user: current_user)
     else
-      @jokes = Joke.all
+      @jokes = Joke.where.not(user: current_user)
     end
+    @bought_jokes = current_user.bought_jokes.map(&:joke)
+    @jokes = @jokes.reject { |joke| @bought_jokes.include? joke }
   end
 
 
@@ -19,7 +22,7 @@ class JokesController < ApplicationController
     @joke = Joke.new(params_joke)
     @joke.user = current_user
     if @joke.save
-      redirect_to root_path
+      redirect_to admin_jokes_path
     else
       render :new
     end

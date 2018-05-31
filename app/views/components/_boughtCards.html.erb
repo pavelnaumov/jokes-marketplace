@@ -1,14 +1,14 @@
 <div class="cards-container">
   <div class="row">
-    <% @jokes.each do |joke| %>
+    <% @bought_jokes.each do |boughtjoke| %>
     <div class="col-sm-12 col-sm-6 col-md-4">
       <div class="joke-card">
         <div class="card-main text-center">
           <div class="joke-title">
-            <%= joke.title %>
+            <%= boughtjoke.joke.title %>
           </div>
           <div class="joke-rating">
-            <%= "⭐️" * joke.rating.to_i %>
+            <%= "⭐️" * boughtjoke.joke.rating.to_i %>
           </div>
         </div>
         <div class="arrow">
@@ -21,14 +21,16 @@
           edit
         </div>
         <div class="delete">
+          <%= link_to admin_joke_bought_joke_path(boughtjoke.joke, boughtjoke), method: :delete do %>
           <%= image_tag 'plus.svg' %>
+          <% end %>
         </div>
         <div class="delete-text">
           delete
         </div>
         <div class="corner-button"></div>
         <div class="joke-answer">
-          <%= joke.description %>
+          <%= boughtjoke.joke.description %>
         </div>
       </div>
     </div>
