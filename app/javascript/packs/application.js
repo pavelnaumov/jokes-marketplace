@@ -22,4 +22,3 @@ clickOnBottonArrow();
 
 import { mouseoverEditAndDelete } from '../components/adminCard';
 mouseoverEditAndDelete();
-
