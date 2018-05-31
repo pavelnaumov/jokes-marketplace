@@ -1,8 +1,13 @@
 class JokesController < ApplicationController
 
   before_action :set_joke, only: [:show, :edit, :update, :destroy]
+
   def index
-    @jokes = Joke.all
+    if params[:query].present?
+      @jokes = Joke.where("category ILIKE ?", "%#{params[:query]}%")
+    else
+      @jokes = Joke.all
+    end
   end
 
 
@@ -25,8 +30,7 @@ class JokesController < ApplicationController
   def params_joke
     params.require(:joke).permit(:title, :description, :rating, :user_id)
   end
-
+  
   def set_joke
     @joke = Joke.find(params[:id])
   end
-end
