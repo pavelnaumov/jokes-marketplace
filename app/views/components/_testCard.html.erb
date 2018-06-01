@@ -1,0 +1,91 @@
+<!-- <div class="cards-container">
+  <div class="row"> -->
+    <% @jokes.each do |joke| %>
+
+    <!-- <div class="col-sm-12 col-sm-6 col-md-4">  -->
+
+      <div class="joke-card front-shadow ">
+
+        <div class="front">
+
+
+                <div class="card-main text-center ">
+
+                      <div class="joke-title">
+                        <%= joke.title %>
+                      </div>
+
+                      <div class="joke-rating">
+                        <%= "⭐️" * joke.rating.to_i %>
+                      </div>
+
+                </div>
+
+                <div class="arrow">
+                  <%= image_tag 'right-arrow.svg' %>
+                </div>
+
+
+                <div class="corner-button"></div>
+
+                <div class="joke-answer">
+                  <%= joke.description %>
+                </div>
+
+
+        </div>
+
+        <div class="back hide-back-content">
+
+          <div class="back-arrow">
+                  <%= image_tag 'right-arrow.svg' %>
+                </div>
+
+              <div class="edit">
+                <%= link_to edit_admin_joke_path(joke) do %>
+                <%= image_tag 'edit.svg' %>
+                <% end %>
+              </div>
+
+              <div class="edit-text">
+                edit
+              </div>
+
+
+              <div class="delete">
+                <%= link_to admin_joke_path(joke), method: :delete do %>
+                <%= image_tag 'plus.svg' %>
+                <% end %>
+              </div>
+
+              <div class="delete-text">
+                delete
+              </div>
+
+              <div class="non-favorite">
+                <%= image_tag 'non-favorite.svg' %>
+              </div>
+
+              <!-- <div class="non-favorite-text">
+                favorite?
+              </div> -->
+
+              <div class="favorite">
+                <%#= image_tag 'favorite.svg' %>
+              </div>
+
+              <!-- <div class="favorite-text">
+                un-favorite?
+              </div> -->
+
+
+
+        </div>
+      </div>
+
+<!-- </div> -->
+<% end %>
+  <!-- </div>
+</div>
+
+ -->
