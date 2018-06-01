@@ -1,22 +1,5 @@
-<div class="home-banner text-center">
-  <h1>Just Smile</h1>
-</div>
-
-  <div class="search-form" id="search-stuff">
-    <%= form_tag "/#search-stuff", method: :get do %>
-    <div class="search-form-components">
-      <%= label_tag :query do %>
-      <i class="fas fa-search"></i>
-      <% end %>
-      <%= text_field_tag :query,
-        params[:query],
-        class: "form-control",
-        placeholder: "search by category"
-      %>
-      </div>
-    <% end %>
-  </div>
-
+<%= render "components/banner" %>
+<%= render "components/search" %>
 <%= render "components/cards" %>
 
 

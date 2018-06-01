@@ -14,7 +14,10 @@
   width: 150px;
   height: 60px;
   border-radius: 27.5px;
-  transition: 1s;
+  opacity: 0.8;
+  right: -20px;
+  transition: 0.5s;
+
 }
 
 .front {
@@ -23,7 +26,9 @@
 .buy-button:hover {
   color: rgba(0, 0, 0, 0.8);
   background-color: rgba(255, 255, 255, 1);
-  transition: 1s;
+  transition: 0.5s;
+  font-weight: bold;
+  opacity: 1;
 }
 
 .cards-container {
