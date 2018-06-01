@@ -40,9 +40,11 @@ a:hover {
   margin-right: 20px;
   font-size: 15px;
   transition: 0.5s;
+  opacity: 0.7;
   &:hover {
     font-weight: bold;
     transition: 0.5s;
+    opacity: 1;
   }
 }
 /* Basic navbar item */
@@ -77,8 +79,16 @@ a:hover {
 }
 .navbar-wagon-dropdown-menu li > a:hover {
   background: transparent !important;
+  font-weight: bold !important;
+  opacity: 1 !important;
   color: black !important;
+  margin-left: 10px !important;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
 }
+
 .navbar-wagon-dropdown-menu:before {
   content: ' ';
   height: 10px;
