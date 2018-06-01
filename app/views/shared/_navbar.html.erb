@@ -13,7 +13,7 @@
         <p class="navbar-username" id="navbar-wagon-menu" data-toggle="dropdown"><i class="fas fa-bars"></i></p>
         <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
           <li><%= link_to 'Your Jokes', admin_jokes_path %></a></li>
-          <li><%= link_to 'Bought Jokes', admin_joke_bought_jokes_path(:id) %></a></li>
+          <li><%= link_to 'Bought Jokes', admin_bought_jokes_path(:id) %></a></li>
           <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
           <li role="separator" class="divider"></li>
           <li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>

@@ -22,3 +22,10 @@ clickOnButtonArrowToEditAndDelete();
 
 import { mouseoverEditAndDelete } from '../components/adminCard';
 mouseoverEditAndDelete();
+
+
+// import { rotateCards } from '../components/rotateCard';
+// rotateCards();
+
+import { favorite } from '../components/favorite';
+favorite();
