@@ -1,15 +1,19 @@
 .home-banner {
-  background: image-url('smile') no-repeat left center;
+  background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0)),image-url('smile') no-repeat left center;
   background-size: cover;
   height: 100vh;
   text-align: center;
   margin: auto;
   h1 {
     margin: 0;
-    padding-top: 150px;
+    padding-top: 120px;
     font-size: 80px;
     font-weight: bolder;
     color: white;
+  }
+  h3 {
+    color: white;
+    font-weight: lighter;
   }
 }
 
