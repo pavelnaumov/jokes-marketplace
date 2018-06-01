@@ -2,7 +2,7 @@
   <div class="row">
     <% @bought_jokes.each do |boughtjoke| %>
     <div class="col-sm-12 col-sm-6 col-md-4">
-      <div class="joke-card non-fav">
+      <div class="joke-card">
         <div class="card-main text-center">
           <div class="joke-title">
             <%= boughtjoke.joke.title %>
@@ -21,29 +21,13 @@
           edit
         </div>
         <div class="delete">
-          <%= link_to admin_bought_joke_path(boughtjoke), method: :delete do %>
+          <%= link_to admin_joke_bought_joke_path(boughtjoke.joke, boughtjoke), method: :delete do %>
           <%= image_tag 'plus.svg' %>
           <% end %>
         </div>
         <div class="delete-text">
           delete
         </div>
-        <% if boughtjoke.favorite %>
-          <%= link_to admin_unfavorite_path(boughtjoke), method: :patch do %>
-            <div class="favorite">
-              <%= image_tag 'favorite.svg' %>
-            </div>
-          <% end %>
-        <% else %>
-          <%= link_to admin_favorite_path(boughtjoke), method: :patch do %>
-            <div class="non-favorite">
-              <%= image_tag 'non-favorite.svg' %>
-            </div>
-          <% end %>
-        <% end %>
-
-
-
         <div class="corner-button"></div>
         <div class="joke-answer">
           <%= boughtjoke.joke.description %>
