@@ -1,7 +1,6 @@
-
-
-.hide-front-content {
-  opacity: 0;
+.blurry-text {
+ color: transparent;
+ text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
 }
 
 .buy-button {
@@ -17,12 +16,8 @@
   opacity: 0.8;
   right: -20px;
   transition: 0.5s;
-
 }
 
-.front {
-  transition: 2s;
-}
 .buy-button:hover {
   color: rgba(0, 0, 0, 0.8);
   background-color: rgba(255, 255, 255, 1);
@@ -34,31 +29,16 @@
 .cards-container {
   margin: 0 50px 100px 50px;
 }
-
-
-.front-shadow {
-  box-shadow: 1px 1px 3px RGBA(90, 90, 90, 0.4);
-  transition: 1s;
-}
-
 .joke-card {
   position: relative;
   border-radius: 10px;
   height: 400px;
   width: 320px;
   background-color: white;
+  box-shadow: 1px 1px 3px RGBA(90, 90, 90, 0.4);
   margin: 20px auto;
-  transition: transform 1.5s;
-  transform-style: preserve-3d;
 }
 
-.joke-card.flipped {
-  transform: rotateY(-180deg);
-  transition: transform 1.5s;
-    transform-style: preserve-3d;
-
-
-}
 .corner-button {
   position: absolute;
   width: 60px;
@@ -101,7 +81,6 @@
   transition: 1s;
 }
 
-
 .joke-answer-appear {
   opacity: 1;
   transition: 3s;
@@ -133,20 +112,3 @@
  color: rgba(0, 0, 0, 0.6);
  // transition: 2s;
 }
-
-.arrow {
- position: absolute;
- top: 370px;
- width: 20px;
- right: 15px;
- font-size: 10px;
- transition: 1s;
- opacity: 0.5;
-
-}
-
-.arrow-flipped {
-  transform: rotate(-90deg);
-  transition: 1s;
-}
-
